@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
@@ -27,10 +29,10 @@ extension ViewController: UISearchBarDelegate {
         var locationName: String?
         var temperature: Double?
         
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url!) {[weak self] (data, response, error) in
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
-                    as! [String : AnyObject]
+                as! [String : AnyObject]
                 
                 if let location = json["location"] {
                     locationName = location["name"] as? String
@@ -40,11 +42,16 @@ extension ViewController: UISearchBarDelegate {
                     temperature = current["temperature"] as? Double
                 }
                 
+                DispatchQueue.main.async {
+                    self?.cityLabel.text = locationName
+                    self?.temperatureLabel.text = "\(temperature!)"
+                }
+                
             }
             catch let jsonError {
                 print(jsonError)
             }
-            
+                
         }
         task.resume()
     }

@@ -26,17 +26,35 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Hdx-TR-Dr8"/>
                                 </connections>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-je-AOJ">
+                                <rect key="frame" x="143.5" y="304.5" width="88" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="310-jD-xZC">
+                                <rect key="frame" x="48" y="371" width="279" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="310-jD-xZC" firstAttribute="top" secondItem="hpY-je-AOJ" secondAttribute="bottom" constant="8" id="St7-70-WjX"/>
+                            <constraint firstItem="310-jD-xZC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WG5-xJ-KKR"/>
                             <constraint firstItem="5CG-vR-mJ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZNm-pj-WYO"/>
+                            <constraint firstItem="hpY-je-AOJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cOg-pw-vqc"/>
                             <constraint firstItem="5CG-vR-mJ3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ivi-ei-pk5"/>
+                            <constraint firstItem="hpY-je-AOJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQN-Xn-0el"/>
                             <constraint firstItem="5CG-vR-mJ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zpz-qP-X9q"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="hpY-je-AOJ" id="k5F-V3-bDW"/>
                         <outlet property="searchBar" destination="5CG-vR-mJ3" id="GlB-eg-Pgk"/>
+                        <outlet property="temperatureLabel" destination="310-jD-xZC" id="n05-5F-dxG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
