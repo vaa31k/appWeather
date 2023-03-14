@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone SE 3 Wallpaper 3" translatesAutoresizingMaskIntoConstraints="NO" id="r3m-NI-v7G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5CG-vR-mJ3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <constraints>
@@ -26,14 +29,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Hdx-TR-Dr8"/>
                                 </connections>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-je-AOJ">
-                                <rect key="frame" x="143.5" y="304.5" width="88" height="58.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-je-AOJ">
+                                <rect key="frame" x="8" y="304" width="359" height="59"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="310-jD-xZC">
-                                <rect key="frame" x="48" y="371" width="279" height="58.5"/>
+                                <rect key="frame" x="48" y="371" width="279" height="58"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,12 +45,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="310-jD-xZC" firstAttribute="top" secondItem="hpY-je-AOJ" secondAttribute="bottom" constant="8" id="3dj-OL-43K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r3m-NI-v7G" secondAttribute="trailing" id="3wc-sA-iDF"/>
+                            <constraint firstItem="hpY-je-AOJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Ksr-7V-6hd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hpY-je-AOJ" secondAttribute="trailing" constant="8" id="P7N-S8-nZC"/>
                             <constraint firstItem="310-jD-xZC" firstAttribute="top" secondItem="hpY-je-AOJ" secondAttribute="bottom" constant="8" id="St7-70-WjX"/>
                             <constraint firstItem="310-jD-xZC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WG5-xJ-KKR"/>
                             <constraint firstItem="5CG-vR-mJ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZNm-pj-WYO"/>
                             <constraint firstItem="hpY-je-AOJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cOg-pw-vqc"/>
                             <constraint firstItem="5CG-vR-mJ3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ivi-ei-pk5"/>
+                            <constraint firstAttribute="bottom" secondItem="r3m-NI-v7G" secondAttribute="bottom" id="oTt-Yl-4Pj"/>
                             <constraint firstItem="hpY-je-AOJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQN-Xn-0el"/>
+                            <constraint firstItem="r3m-NI-v7G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v3i-kP-FP4"/>
+                            <constraint firstItem="r3m-NI-v7G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xkd-Gn-ToU"/>
                             <constraint firstItem="5CG-vR-mJ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zpz-qP-X9q"/>
                         </constraints>
                     </view>
@@ -59,10 +69,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="4"/>
+            <point key="canvasLocation" x="20" y="3.1484257871064472"/>
         </scene>
     </scenes>
     <resources>
+        <image name="iPhone SE 3 Wallpaper 3" width="1284" height="2778"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
