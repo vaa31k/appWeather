@@ -25,14 +25,19 @@ extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         
-        let urlString =  "http://api.weatherstack.com/current?access_key=2b5a6e49306834779ea76ba4c518ee14&query=\(searchBar.text!.replacingOccurrences(of: " ", with: "%20"))"
+        let urlString =  "http://api.weatherstack.com/current?access_key=2b5a6e49306834779ea76ba4c518ee14&query=\(searchBar.text!.replacingOccurrences(of: " ", with: "%20"))".encodeUrl
         let url = URL(string: urlString)
+        
+        guard let unwrappedUrl = url else {
+            print("url = nil")
+            return
+        }
         
         var locationName: String?
         var temperature: Double?
         var errorHasOccured: Bool = false
-        
-        let task = URLSession.shared.dataTask(with: url!) {[weak self] (data, response, error) in
+    
+        let task = URLSession.shared.dataTask(with: unwrappedUrl) { [weak self] (data, response, error) in
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
                 as! [String : AnyObject]
@@ -69,7 +74,6 @@ extension ViewController: UISearchBarDelegate {
             catch let jsonError {
                 print(jsonError)
             }
-                
         }
         task.resume()
     }
