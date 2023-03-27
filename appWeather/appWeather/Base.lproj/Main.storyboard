@@ -15,16 +15,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1645019267_1-abrakadabra-fun-p-rozovie-oblaka-estetika-1" translatesAutoresizingMaskIntoConstraints="NO" id="r3m-NI-v7G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5CG-vR-mJ3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jbR-xf-lfG"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Hdx-TR-Dr8"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-je-AOJ">
+                                <rect key="frame" x="8" y="304" width="359" height="59"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="310-jD-xZC">
+                                <rect key="frame" x="48" y="371" width="279" height="58"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="310-jD-xZC" firstAttribute="top" secondItem="hpY-je-AOJ" secondAttribute="bottom" constant="8" id="3dj-OL-43K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r3m-NI-v7G" secondAttribute="trailing" id="3wc-sA-iDF"/>
+                            <constraint firstItem="hpY-je-AOJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Ksr-7V-6hd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hpY-je-AOJ" secondAttribute="trailing" constant="8" id="P7N-S8-nZC"/>
+                            <constraint firstItem="310-jD-xZC" firstAttribute="top" secondItem="hpY-je-AOJ" secondAttribute="bottom" constant="8" id="St7-70-WjX"/>
+                            <constraint firstItem="310-jD-xZC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WG5-xJ-KKR"/>
+                            <constraint firstItem="5CG-vR-mJ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZNm-pj-WYO"/>
+                            <constraint firstItem="5CG-vR-mJ3" firstAttribute="centerY" secondItem="hpY-je-AOJ" secondAttribute="centerY" constant="-303.5" id="cOg-pw-vqc"/>
+                            <constraint firstItem="5CG-vR-mJ3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ivi-ei-pk5"/>
+                            <constraint firstAttribute="bottom" secondItem="r3m-NI-v7G" secondAttribute="bottom" id="oTt-Yl-4Pj"/>
+                            <constraint firstItem="hpY-je-AOJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQN-Xn-0el"/>
+                            <constraint firstItem="r3m-NI-v7G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v3i-kP-FP4"/>
+                            <constraint firstItem="r3m-NI-v7G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xkd-Gn-ToU"/>
+                            <constraint firstItem="5CG-vR-mJ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zpz-qP-X9q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="hpY-je-AOJ" id="k5F-V3-bDW"/>
+                        <outlet property="searchBar" destination="5CG-vR-mJ3" id="GlB-eg-Pgk"/>
+                        <outlet property="temperatureLabel" destination="310-jD-xZC" id="n05-5F-dxG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="4"/>
+            <point key="canvasLocation" x="20" y="3.1484257871064472"/>
         </scene>
     </scenes>
     <resources>
+        <image name="1645019267_1-abrakadabra-fun-p-rozovie-oblaka-estetika-1" width="1080" height="1350"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
