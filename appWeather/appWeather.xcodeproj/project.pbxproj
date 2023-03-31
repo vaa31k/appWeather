@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472F49CE29D3121800F3E979 /* AppWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F49CD29D3121800F3E979 /* AppWeatherService.swift */; };
 		47405DAA29C8A5CC00DC26F7 /* String .swift in Sources */ = {isa = PBXBuildFile; fileRef = 47405DA929C8A5CC00DC26F7 /* String .swift */; };
 		47C8BA9E29B660E3007F1E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8BA9D29B660E3007F1E71 /* AppDelegate.swift */; };
 		47C8BAA029B660E3007F1E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8BA9F29B660E3007F1E71 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		472F49CD29D3121800F3E979 /* AppWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWeatherService.swift; sourceTree = "<group>"; };
 		47405DA929C8A5CC00DC26F7 /* String .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String .swift"; sourceTree = "<group>"; };
 		47C8BA9A29B660E3007F1E71 /* appWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C8BA9D29B660E3007F1E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		472F49CC29D311C500F3E979 /* AppWeatherService */ = {
+			isa = PBXGroup;
+			children = (
+				472F49CD29D3121800F3E979 /* AppWeatherService.swift */,
+			);
+			path = AppWeatherService;
+			sourceTree = "<group>";
+		};
 		47405DA829C8A5AE00DC26F7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		47C8BA9C29B660E3007F1E71 /* appWeather */ = {
 			isa = PBXGroup;
 			children = (
+				472F49CC29D311C500F3E979 /* AppWeatherService */,
 				47405DA829C8A5AE00DC26F7 /* Extensions */,
 				47C8BA9D29B660E3007F1E71 /* AppDelegate.swift */,
 				47C8BA9F29B660E3007F1E71 /* SceneDelegate.swift */,
@@ -155,6 +166,7 @@
 				47C8BAA229B660E3007F1E71 /* ViewController.swift in Sources */,
 				47C8BA9E29B660E3007F1E71 /* AppDelegate.swift in Sources */,
 				47C8BAA029B660E3007F1E71 /* SceneDelegate.swift in Sources */,
+				472F49CE29D3121800F3E979 /* AppWeatherService.swift in Sources */,
 				47405DAA29C8A5CC00DC26F7 /* String .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,15 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    //var locationName: String?
-    //var temperature: Double?
+    let service = AppWeatherService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //searchBar.delegate = self
-        
     }
-
 }
 
 extension ViewController: UISearchBarDelegate {
@@ -34,46 +30,13 @@ extension ViewController: UISearchBarDelegate {
             return
         }
         
-        let urlString =  "http://api.weatherstack.com/current?access_key=2b5a6e49306834779ea76ba4c518ee14&query=\(searchBarUnwrappedText.replacingOccurrences(of: " ", with: "%20"))".encodeUrl
-        let url = URL(string: urlString)
-        
-        guard let unwrappedUrl = url else {
-            print("url = nil")
-            return
-        }
-        
-        
-      //  var errorHasOccured: Bool = false
-        
-        let task = URLSession.shared.dataTask(with: unwrappedUrl) { [weak self] (data, response, error) in
-            do {
-                guard let unwrappedData = data else {
-                    print("data = nil")
-                    return
-                }
-                
-                let json = try JSONSerialization.jsonObject(with: unwrappedData, options: .mutableContainers)
-                as! [String : AnyObject]
-                
-                if let error = json["error"] {
-                    self?.fillLabelError(errorInfo: error["info"] as? String)
-                   // errorHasOccured = true
-                }
-                
-                if let location = json["location"],
-                   let current = json["current"] {
-                    self?.fillLabels(locationName: location["name"] as? String,
-                                     temperature: current["temperature"] as? Double
-                    )
-                    
-                }
-                
+        service.getSearchInformation(searchText: searchBarUnwrappedText, completion:  { response in
+             if response.error != nil {
+                self.fillLabelError(errorInfo: response.error?.info)
+            } else {
+                self.fillLabels(locationName: response.location?.name, temperature: response.current?.temperature)
             }
-            catch let jsonError {
-                print(jsonError)
-            }
-        }
-        task.resume()
+        })
         
     }
     
