@@ -31,11 +31,11 @@ extension ViewController: UISearchBarDelegate {
         }
         
         service.getSearchInformation(searchText: searchBarUnwrappedText, completion:  { response in
-             if response.error != nil {
-                self.fillLabelError(errorInfo: response.error?.info)
-            } else {
+            guard let responseError = response.error?.info else {
                 self.fillLabels(locationName: response.location?.name, temperature: response.current?.temperature)
+                return
             }
+            self.fillLabelError(errorInfo: responseError)
         })
         
     }

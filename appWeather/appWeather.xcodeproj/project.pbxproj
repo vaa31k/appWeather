@@ -15,6 +15,7 @@
 		47C8BAA529B660E3007F1E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C8BAA329B660E3007F1E71 /* Main.storyboard */; };
 		47C8BAA729B660E4007F1E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C8BAA629B660E4007F1E71 /* Assets.xcassets */; };
 		47C8BAAA29B660E4007F1E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C8BAA829B660E4007F1E71 /* LaunchScreen.storyboard */; };
+		47D2424829D70FE100DF9293 /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D2424729D70FE100DF9293 /* WeatherResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		47C8BAAB29B660E4007F1E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47CF5C7329C3346700C1046C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		47CF5C7429C3346700C1046C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		47D2424729D70FE100DF9293 /* WeatherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		47C8BA9C29B660E3007F1E71 /* appWeather */ = {
 			isa = PBXGroup;
 			children = (
+				47D2424629D70FC100DF9293 /* Models */,
 				472F49CC29D311C500F3E979 /* AppWeatherService */,
 				47405DA829C8A5AE00DC26F7 /* Extensions */,
 				47C8BA9D29B660E3007F1E71 /* AppDelegate.swift */,
@@ -89,6 +92,14 @@
 				47C8BAAB29B660E4007F1E71 /* Info.plist */,
 			);
 			path = appWeather;
+			sourceTree = "<group>";
+		};
+		47D2424629D70FC100DF9293 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				47D2424729D70FE100DF9293 /* WeatherResult.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D2424829D70FE100DF9293 /* WeatherResult.swift in Sources */,
 				47C8BAA229B660E3007F1E71 /* ViewController.swift in Sources */,
 				47C8BA9E29B660E3007F1E71 /* AppDelegate.swift in Sources */,
 				47C8BAA029B660E3007F1E71 /* SceneDelegate.swift in Sources */,
